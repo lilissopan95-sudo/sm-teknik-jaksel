@@ -40,7 +40,7 @@ h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:bloc
 
 .accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .accordion-item{border-bottom:1px solid #ddd;background:#fff}
-.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
+.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
 .accordion-header::after{content:'+';font-size:16px;color:var(--biru2)}
 .accordion-header.active{background:var(--biru);color:#fff}
 .accordion-header.active::after{content:'-';color:#fff}
@@ -80,13 +80,47 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <!-- 10 LAYAN -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
- <div class="accordion-item">
+<div class="card fade-in"><img src="service ac.jpg" alt="Service AC" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
+<div class="card fade-in"><img src="kulkas.jpg" alt="Service Kulkas" class="card-img"><div class="card-content"><b>🧊 Service Kulkas</b>Tidak Dingin, Bocor, Mati Total</div></div>
+<div class="card fade-in"><img src="servis dispenser.jpg" alt="Service Dispenser" class="card-img"><div class="card-content"><b>💧 Service Dispenser</b>Tidak Dingin/Panas, Bocor</div></div>
+<div class="card fade-in"><img src="water heater.jpg" alt="Service Water Heater" class="card-img"><div class="card-content"><b>🚿 Service Water Heater</b>Tidak Panas, Bocor, Korslet</div></div>
+<div class="card fade-in"><img src="intalasi listrik.jpg" alt="Listrik Rumah" class="card-img"><div class="card-content"><b>⚡ Listrik Rumah</b>Instalasi, Tambah Daya, Korslet</div></div>
+<div class="card fade-in"><img src="cctv.jpg" alt="Pasang CCTV" class="card-img"><div class="card-content"><b>📹 Pasang CCTV</b>Pemasangan, Setting DVR</div></div>
+<div class="card fade-in"><img src="pompa air.jpg" alt="Service Pompa Air" class="card-img"><div class="card-content"><b>🔧 Service Pompa Air</b>Tidak Nyala, Lemah, Bocor</div></div>
+<div class="card fade-in"><img src="mesin cuci.jpg" alt="Service Mesin Cuci" class="card-img"><div class="card-content"><b>👕 Service Mesin Cuci</b>1 Tabung, 2 Tabung, Error</div></div>
+<div class="card fade-in"><img src="kompor gas.jpg" alt="Service Kompor Gas" class="card-img"><div class="card-content"><b>🔥 Service Kompor Gas</b>Api Kecil, Tidak Nyala</div></div>
+<div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
+</div></div></section>
+
+<!-- 11 HARGA -->
+<section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
+<div class="accordion fade-in">
+
+<div class="accordion-item">
   <button class="accordion-header">
     <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:18px;height:18px;vertical-align:middle;margin-right:8px">
     Service AC Semua Tipe & PK
   </button>
   <div class="accordion-content" style="padding:0">
     
+    <!-- SUB MENU 1: MACAM MACAM AC -->
+    <div class="accordion-item" style="border:none">
+      <button class="accordion-header" style="background:#e3f2fd;font-size:13px;padding:12px 25px">
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:16px;height:16px;vertical-align:middle;margin-right:6px">
+        Macam-Macam AC & Harga
+      </button>
+      <div class="accordion-content">
+        <table>
+          <tr><th>Jenis AC</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr>
+          <tr><td>AC Split Wall / Rumah</td><td><b>Rp 75.000</b></td><td><b>Rp 120.000</b></td></tr>
+          <tr><td>AC Cassette / Ceiling</td><td>Rp 250.000</td><td>Rp 350.000</td></tr>
+          <tr><td>AC Standing Floor</td><td>Rp 300.000</td><td>Rp 400.000</td></tr>
+          <tr><td>AC Central / Ducting</td><td colspan="2">Hubungi Kami</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- SUB MENU 2: PAKET CUCI LENGKAP -->
     <div class="accordion-item" style="border:none">
       <button class="accordion-header" style="background:#e3f2fd;font-size:13px;padding:12px 25px">
         <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:16px;height:16px;vertical-align:middle;margin-right:6px">
@@ -113,45 +147,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 
   </div>
 </div>
-  </div>
-</div>
-  </div>
-</div>
-<div class="card fade-in"><img src="service ac.jpg" alt="Service AC" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
-<div class="card fade-in"><img src="kulkas.jpg" alt="Service Kulkas" class="card-img"><div class="card-content"><b>🧊 Service Kulkas</b>Tidak Dingin, Bocor, Mati Total</div></div>
-<div class="card fade-in"><img src="servis dispenser.jpg" alt="Service Dispenser" class="card-img"><div class="card-content"><b>💧 Service Dispenser</b>Tidak Dingin/Panas, Bocor</div></div>
-<div class="card fade-in"><img src="water heater.jpg" alt="Service Water Heater" class="card-img"><div class="card-content"><b>🚿 Service Water Heater</b>Tidak Panas, Bocor, Korslet</div></div>
-<div class="card fade-in"><img src="intalasi listrik.jpg" alt="Listrik Rumah" class="card-img"><div class="card-content"><b>⚡ Listrik Rumah</b>Instalasi, Tambah Daya, Korslet</div></div>
-<div class="card fade-in"><img src="cctv.jpg" alt="Pasang CCTV" class="card-img"><div class="card-content"><b>📹 Pasang CCTV</b>Pemasangan, Setting DVR</div></div>
-<div class="card fade-in"><img src="pompa air.jpg" alt="Service Pompa Air" class="card-img"><div class="card-content"><b>🔧 Service Pompa Air</b>Tidak Nyala, Lemah, Bocor</div></div>
-<div class="card fade-in"><img src="mesin cuci.jpg" alt="Service Mesin Cuci" class="card-img"><div class="card-content"><b>👕 Service Mesin Cuci</b>1 Tabung, 2 Tabung, Error</div></div>
-<div class="card fade-in"><img src="kompor gas.jpg" alt="Service Kompor Gas" class="card-img"><div class="card-content"><b>🔥 Service Kompor Gas</b>Api Kecil, Tidak Nyala</div></div>
-<div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
-</div></div></section>
 
-<!-- 11 HARGA -->
-<section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
-<div class="accordion fade-in">
-     <div class="accordion-item">
-    <div class="accordion-item" style="border:none">
-      <button class="accordion-header" style="background:#e3f2fd;font-size:13px;padding:12px 25px">✅ Paket Cuci Lengkap - Sudah termasuk 8 poin</button>
-      <div class="accordion-content">
-        <table>
-          <tr><th>Pekerjaan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr>
-          <tr><td>Cuci AC</td><td><b>Rp 75.000</b></td><td><b>Rp 120.000</b></td></tr>
-          <tr><td>Bersihkan Indoor</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Outdoor</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Blower</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Filter Udara</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Body AC</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Jalur Pembuangan Air</td><td colspan="2">Sudah Termasuk</td></tr>
-          <tr><td>Bersihkan Sisa Pekerjaan</td><td colspan="2">Sudah Termasuk</td></tr>
-          
-          <tr><th colspan="3" style="text-align:center;background:#FFC107;color:#0A1F44">Layanan Lainnya</th></tr>
-          <tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr>
-          <tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr>
-        </table>
-</div>
 <div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Service Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon Kulkas</td><td>Rp 250.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">💧 Service Dispenser</button><div class="accordion-content"><table><tr><td>Service Dispenser</td><td>Rp 100.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🚿 Service Water Heater</button><div class="accordion-content"><table><tr><td>Service Water Heater</td><td>Rp 150.000</td></tr></table></div></div>
