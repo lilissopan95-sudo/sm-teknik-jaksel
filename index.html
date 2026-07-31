@@ -30,7 +30,6 @@ section{padding:45px 15px}
 h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:24px}
 h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:block;margin:8px auto}
 
-/* 2 KOLOM DI HP, 5 KOLOM DI LAPTOP */
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px;padding:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
@@ -54,10 +53,14 @@ form{background:#fff;padding:18px;border-radius:10px;max-width:550px;margin:auto
 form input,form select,form textarea{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:14px}
 form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer}
 
-/* ULASAN PELANGGAN */
-.ulasan-box{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.bintang-input span{font-size:30px;color:#ccc;cursor:pointer;transition:.2s}
+/* ULASAN PELANGGAN SUDAH DIRAPIKAN */
+.ulasan-box{background:#fff;padding:25px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:10px 0;padding:12px;border:2px solid #ddd;border-radius:6px;font-size:14px;font-family:'Segoe UI',Arial}
+.bintang-input{margin:15px 0}
+.bintang-input span{font-size:35px;color:#ccc;cursor:pointer;transition:.2s;letter-spacing:5px}
 .bintang-input span.active{color:var(--kuning)}
+.ulasan-box button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer;margin-top:10px}
+
 .list-ulasan{max-width:800px;margin:auto}
 .kartu-ulasan{background:#fff;padding:15px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;border-left:4px solid var(--kuning)}
 .kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:15px}
@@ -76,7 +79,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
     <h1>SM TEKNIK JAKSEL</h1>
     <p class="slogan">SOLUSI TEPAT, TEKNISI HEBAT, SEMUA BISA</p>
     <p style="margin:6px 0;font-size:13px">✅ Profesional • ✅ Bergaransi • ✅ Respon Cepat</p>
-    <a href="#layanan" class="btn">LAYANAN</a>
+    <a href="#layanan" class="btn">LAYAN</a>
     <a href="#ulasan" class="btn kuning">ULASAN</a>
     <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
     <div class="sosmed">
@@ -136,12 +139,12 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
-<!-- ULASAN PELANGGAN LENGKAP -->
+<!-- ULASAN PELANGGAN -->
 <section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
 <div class="ulasan-box fade-in">
   <h3 style="text-align:center;color:var(--biru);margin-bottom:10px">Beri Penilaian Anda</h3>
   <input type="text" id="namaUlasan" placeholder="Nama Anda" required>
-  <div class="bintang-input" style="text-align:center;margin:10px 0">
+  <div class="bintang-input">
     <span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span>
   </div>
   <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
