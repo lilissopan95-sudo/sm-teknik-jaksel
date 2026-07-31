@@ -30,7 +30,6 @@ section{padding:45px 15px}
 h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:24px}
 h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:block;margin:8px auto}
 
-/* 2 KOLOM DI HP, 5 KOLOM DI LAPTOP */
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px;padding:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
@@ -54,6 +53,16 @@ form{background:#fff;padding:18px;border-radius:10px;max-width:550px;margin:auto
 form input,form select,form textarea{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:14px}
 form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer}
 
+/* ULASAN BARU */
+.ulasan-box{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+.bintang-input span{font-size:30px;color:#ccc;cursor:pointer;transition:.2s}
+.bintang-input span.active{color:var(--kuning)}
+.list-ulasan{max-width:800px;margin:auto}
+.kartu-ulasan{background:#fff;padding:15px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;border-left:4px solid var(--kuning)}
+.kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:15px}
+.kartu-ulasan .bintang{color:var(--kuning);font-size:16px;margin:4px 0}
+.kartu-ulasan .tgl{font-size:12px;color:#777}
+
 footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-size:13px}
 .whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999}
 </style>
@@ -66,8 +75,8 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
     <h1>SM TEKNIK JAKSEL</h1>
     <p class="slogan">SOLUSI TEPAT, TEKNISI HEBAT, SEMUA BISA</p>
     <p style="margin:6px 0;font-size:13px">✅ Profesional • ✅ Bergaransi • ✅ Respon Cepat</p>
-    <a href="#layanan" class="btn">LAYAN</a>
-    <a href="https://wa.me/6282282508521" class="btn kuning" target="_blank">WA: 0822-8250-8521</a>
+    <a href="#layanan" class="btn">LAYANAN</a>
+    <a href="#ulasan" class="btn kuning">ULASAN</a>
     <div class="sosmed">
       <a href="https://www.tiktok.com/@sm.teknik.jaksel" class="tt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.5 2v10.3c0 .8-.6 1.5-1.5 1.5s-1.5-.7-1.5-1.5 .6-1.5 1.5-1.5V7.1c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5V2h-3z"/></svg></a>
       <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5a3.7 3.7 0 0 1-1.5-1 3.7 3.7 0 0 1-1-1.5c-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-2 .4-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 2 .2.5.4.8.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2 .4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 2-.4.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2 .1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-2-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2zm5.5-1.9a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></svg></a>
@@ -92,11 +101,9 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- 11 HARGA + MACAM MACAM AC UDAH DITAMBAH -->
+<!-- 11 HARGA + MACAM MACAM AC -->
 <section id="harga" style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
-
-<!-- 1. SERVICE AC 3 LEVEL -->
 <div class="accordion-item">
   <button class="accordion-header"><img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:20px;margin-right:10px">1. Service AC Semua Tipe & PK</button>
   <div class="accordion-content" style="padding:0">
@@ -105,30 +112,28 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
       <div class="accordion-content" style="padding:0">
         <div class="accordion-item" style="border:none">
           <button class="accordion-header" style="padding-left:50px">AC Split Wall / Rumah</button>
-          <div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr><tr><td>Cek Freon + Tekanan</td><td>Rp 50.000</td><td>Rp 50.000</td></tr><tr><td>Perbaikan Bocor Freon</td><td>Rp 150.000</td><td>Rp 200.000</td></tr></table></div>
+          <div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div>
         </div>
         <div class="accordion-item" style="border:none">
           <button class="accordion-header" style="padding-left:50px">AC Cassette / Ceiling</button>
-          <div class="accordion-content"><table><tr><th>Layanan</th><th>Harga</th></tr><tr><td>Cuci AC</td><td>Rp 250.000</td></tr><tr><td>Isi Freon</td><td>Rp 400.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 600.000</td></tr></table></div>
+          <div class="accordion-content"><table><tr><th>Layanan</th><th>Harga</th></tr><tr><td>Cuci AC</td><td>Rp 250.000</td></tr><tr><td>Isi Freon</td><td>Rp 400.000</td></tr></table></div>
         </div>
         <div class="accordion-item" style="border:none">
           <button class="accordion-header" style="padding-left:50px">AC Standing Floor</button>
-          <div class="accordion-content"><table><tr><th>Layanan</th><th>Harga</th></tr><tr><td>Cuci AC</td><td>Rp 300.000</td></tr><tr><td>Isi Freon</td><td>Rp 450.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 700.000</td></tr></table></div>
+          <div class="accordion-content"><table><tr><th>Layanan</th><th>Harga</th></tr><tr><td>Cuci AC</td><td>Rp 300.000</td></tr><tr><td>Isi Freon</td><td>Rp 450.000</td></tr></table></div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
-<!-- 2-11 LAINNYA -->
-<div class="accordion-item"><button class="accordion-header">🧊 2. Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Service Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon Kulkas</td><td>Rp 250.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🧊 2. Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">💧 3. Service Dispenser</button><div class="accordion-content"><table><tr><td>Service Dispenser</td><td>Rp 100.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🚿 4. Service Water Heater</button><div class="accordion-content"><table><tr><td>Service Water Heater</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">⚡ 5. Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet + Perbaikan</td><td>Rp 100.000</td></tr><tr><td>Instalasi Titik Baru</td><td>Rp 80.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">📹 6. Pasang CCTV</button><div class="accordion-content"><table><tr><td>Pasang CCTV 1 Titik</td><td>Rp 350.000</td></tr><tr><td>Setting DVR 4 Kamera</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔧 7. Service Pompa Air</button><div class="accordion-content"><table><tr><td>Service Pompa Air</td><td>Rp 120.000</td></tr><tr><td>Ganti Seal / Bearing</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">👕 8. Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr><tr><td>Service Mesin Cuci 2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔥 9. Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr><tr><td>Service Kompor 2 Tungku</td><td>Rp 120.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">⚡ 5. Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet + Perbaikan</td><td>Rp 100.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">📹 6. Pasang CCTV</button><div class="accordion-content"><table><tr><td>Pasang CCTV 1 Titik</td><td>Rp 350.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🔧 7. Service Pompa Air</button><div class="accordion-content"><table><tr><td>Service Pompa Air</td><td>Rp 120.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">👕 8. Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🔥 9. Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🌬️ 10. Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas Angin</td><td>Rp 60.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">✅ 11. Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
@@ -150,6 +155,24 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
+<!-- ULASAN PELANGGAN BARU -->
+<section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
+<div class="ulasan-box fade-in">
+  <h3 style="text-align:center;color:var(--biru);margin-bottom:10px">Beri Penilaian Anda</h3>
+  <input type="text" id="namaUlasan" placeholder="Nama Anda" required>
+  <div class="bintang-input" style="text-align:center;margin:10px 0">
+    <span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span>
+  </div>
+  <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
+  <button type="button" onclick="kirimUlasan()">KIRIM ULASAN</button>
+</div>
+<div class="list-ulasan fade-in" id="listUlasan">
+  <!-- Contoh ulasan awal -->
+  <div class="kartu-ulasan"><div class="nama">Budi - Jakarta Selatan</div><div class="bintang">★★★★★</div><p>Teknisi ramah, kerja cepat dan rapi. AC langsung dingin lagi. Recommended!</p><div class="tgl">29 Juli 2026</div></div>
+  <div class="kartu-ulasan"><div class="nama">Siti - Pancoran</div><div class="bintang">★★☆</div><p>Harga transparan, tidak ada biaya tersembunyi. Puas dengan pelayanannya.</p><div class="tgl">28 Juli 2026</div></div>
+</div>
+</div></section>
+
 <footer><p><b>SM TEKNIK JAKSEL</b></p><p>WA 1: 0822-8250-8521 | WA 2: 0813-6919-0759</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
@@ -157,32 +180,46 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
-// JS ACCORDION FIX 3 LEVEL
+// ACCORDION FIX 3 LEVEL
 document.querySelectorAll(".accordion-header").forEach(btn => {
   btn.addEventListener("click", function(e) {
     e.stopPropagation();
     const content = this.nextElementSibling;
     const isOpen = content.style.maxHeight;
-    
     const siblings = this.closest('.accordion-item').parentElement.querySelectorAll(':scope > .accordion-item > .accordion-content');
     siblings.forEach(c => { if(c !== content) c.style.maxHeight = null; });
     const siblingHeaders = this.closest('.accordion-item').parentElement.querySelectorAll(':scope > .accordion-item > .accordion-header');
     siblingHeaders.forEach(h => { if(h !== this) h.classList.remove('active'); });
-    
     if(!isOpen){
       this.classList.add("active");
       content.style.maxHeight = content.scrollHeight + "px";
       let parent = content.closest('.accordion-content');
-      while(parent){
-        parent.style.maxHeight = parent.scrollHeight + "px";
-        parent = parent.parentElement.closest('.accordion-content');
-      }
-    }else{
-      this.classList.remove("active");
-      content.style.maxHeight = null;
-    }
+      while(parent){parent.style.maxHeight = parent.scrollHeight + "px";parent = parent.parentElement.closest('.accordion-content');}
+    }else{this.classList.remove("active");content.style.maxHeight = null;}
   });
 });
+
+// SISTEM ULASAN
+let rating=0;
+document.querySelectorAll('.bintang-input span').forEach(b=>{
+  b.addEventListener('click',()=>{rating=b.dataset.b;updateBintang()})
+});
+function updateBintang(){
+  document.querySelectorAll('.bintang-input span').forEach(b=>{
+    b.classList.toggle('active', b.dataset.b <= rating)
+  })
+}
+function kirimUlasan(){
+  let n=document.getElementById('namaUlasan').value;
+  let u=document.getElementById('isiUlasan').value;
+  if(n=='' || u=='' || rating==0){alert('Lengkapi nama, bintang dan ulasan dulu ya');return}
+  let bintang='★'.repeat(rating)+'☆'.repeat(5-rating);
+  let tgl=new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+  let kartu=`<div class="kartu-ulasan"><div class="nama">${n}</div><div class="bintang">${bintang}</div><p>${u}</p><div class="tgl">${tgl}</div></div>`;
+  document.getElementById('listUlasan').innerHTML = kartu + document.getElementById('listUlasan').innerHTML;
+  document.getElementById('namaUlasan').value='';document.getElementById('isiUlasan').value='';rating=0;updateBintang();
+  alert('Terima kasih atas ulasannya!')
+}
 
 function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama').value;var alamat = document.getElementById('alamat').value;var layanan = document.getElementById('layanan').value;var keluhan = document.getElementById('keluhan').value;var pesan = `Halo SM TEKNIK JAKSEL%0ANama: ${nama}%0AAlamat: ${alamat}%0ALayanan: ${layanan}%0AKeluhan: ${keluhan}`;window.open(`https://wa.me/6282282508521?text=${pesan}`,'_blank');}
 </script>
