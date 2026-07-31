@@ -30,7 +30,6 @@ section{padding:45px 15px}
 h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:24px}
 h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:block;margin:8px auto}
 
-/* 2 KOLOM DI HP, 5 KOLOM DI LAPTOP */
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px;padding:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
@@ -40,7 +39,7 @@ h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:bloc
 
 .accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .accordion-item{border-bottom:1px solid #ddd;background:#fff}
-.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
+.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center}
 .accordion-header::after{content:'+';font-size:16px;color:var(--biru2)}
 .accordion-header.active{background:var(--biru);color:#fff}
 .accordion-header.active::after{content:'-';color:#fff}
@@ -77,10 +76,16 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
   </div>
 </header>
 
-<!-- 10 LAYAN -->
+<!-- 10 LAYAN - FOTO UDAH BALIK -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
-<div class="card fade-in"><img src="service ac.jpg" alt="Service AC" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
+<div class="card fade-in">
+  <img src="service ac.jpg" alt="Service AC" class="card-img">
+  <div class="card-content">
+    <b><img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:14px;height:14px;vertical-align:middle;margin-right:4px"> Service AC</b>
+    Cuci AC, Isi Freon, Bongkar Pasang
+  </div>
+</div>
 <div class="card fade-in"><img src="kulkas.jpg" alt="Service Kulkas" class="card-img"><div class="card-content"><b>🧊 Service Kulkas</b>Tidak Dingin, Bocor, Mati Total</div></div>
 <div class="card fade-in"><img src="servis dispenser.jpg" alt="Service Dispenser" class="card-img"><div class="card-content"><b>💧 Service Dispenser</b>Tidak Dingin/Panas, Bocor</div></div>
 <div class="card fade-in"><img src="water heater.jpg" alt="Service Water Heater" class="card-img"><div class="card-content"><b>🚿 Service Water Heater</b>Tidak Panas, Bocor, Korslet</div></div>
@@ -92,10 +97,86 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- 11 HARGA -->
+<!-- 11 HARGA - 3 LEVEL -->
 <section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
-<div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div></div>
+
+<div class="accordion-item">
+  <button class="accordion-header">
+    <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:18px;height:18px;vertical-align:middle;margin-right:8px">
+    Service AC Semua Tipe & PK
+  </button>
+  <div class="accordion-content" style="padding:0">
+    
+    <div class="accordion-item" style="border:none">
+      <button class="accordion-header" style="background:#e3f2fd;font-size:13px;padding:12px 25px">
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:16px;height:16px;vertical-align:middle;margin-right:6px">
+        Macam-Macam AC
+      </button>
+      <div class="accordion-content" style="padding:0">
+        
+        <div class="accordion-item" style="border:none">
+          <button class="accordion-header" style="background:#fff;font-size:12px;padding:10px 40px">AC Split Wall / Rumah</button>
+          <div class="accordion-content">
+            <table>
+              <tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr>
+              <tr><td>Cuci AC</td><td><b>Rp 75.000</b></td><td><b>Rp 120.000</b></td></tr>
+              <tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr>
+              <tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="accordion-item" style="border:none">
+          <button class="accordion-header" style="background:#fff;font-size:12px;padding:10px 40px">AC Cassette / Ceiling</button>
+          <div class="accordion-content">
+            <table>
+              <tr><th>Layanan</th><th>Harga</th></tr>
+              <tr><td>Cuci AC</td><td>Rp 250.000</td></tr>
+              <tr><td>Isi Freon</td><td>Rp 400.000</td></tr>
+              <tr><td>Bongkar Pasang</td><td>Rp 600.000</td></tr>
+            </table>
+          </div>
+        </div>
+
+        <div class="accordion-item" style="border:none">
+          <button class="accordion-header" style="background:#fff;font-size:12px;padding:10px 40px">AC Standing Floor</button>
+          <div class="accordion-content">
+            <table>
+              <tr><th>Layanan</th><th>Harga</th></tr>
+              <tr><td>Cuci AC</td><td>Rp 300.000</td></tr>
+              <tr><td>Isi Freon</td><td>Rp 450.000</td></tr>
+              <tr><td>Bongkar Pasang</td><td>Rp 700.000</td></tr>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="accordion-item" style="border:none">
+      <button class="accordion-header" style="background:#e3f2fd;font-size:13px;padding:12px 25px">
+        <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:16px;height:16px;vertical-align:middle;margin-right:6px">
+        Paket Cuci Lengkap - 8 Poin
+      </button>
+      <div class="accordion-content">
+        <table>
+          <tr><th>Pekerjaan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr>
+          <tr><td>Cuci AC</td><td><b>Rp 75.000</b></td><td><b>Rp 120.000</b></td></tr>
+          <tr><td>Bersihkan Indoor</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Outdoor</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Blower</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Filter Udara</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Body AC</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Jalur Pembuangan Air</td><td colspan="2">Sudah Termasuk</td></tr>
+          <tr><td>Bersihkan Sisa Pekerjaan</td><td colspan="2">Sudah Termasuk</td></tr>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</div>
+
 <div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Service Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon Kulkas</td><td>Rp 250.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">💧 Service Dispenser</button><div class="accordion-content"><table><tr><td>Service Dispenser</td><td>Rp 100.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🚿 Service Water Heater</button><div class="accordion-content"><table><tr><td>Service Water Heater</td><td>Rp 150.000</td></tr></table></div></div>
