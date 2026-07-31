@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SM TEKNIK JAKSEL - Service AC, Kulkas, Listrik Profesional</title>
+<title>SM TEKNIK JAKSEL - Service AC, Kulkas, Listrik Profesional Bergaransi</title>
 <style>
 :root{--biru:#0A1F44; --biru2:#1976D2; --kuning:#FFC107; --wa:#25D366}
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial}
@@ -17,11 +17,13 @@ header{background:linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);color
 .header-content{padding:20px 15px 25px}
 h1{font-size:29px;margin:10px 0;text-shadow:2px 2px 4px rgba(0,0,0,0.3)}
 .slogan{color:var(--kuning);font-weight:bold;font-size:14px}
-.btn{display:inline-block;background:var(--wa);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;margin:6px 4px;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
+.btn{display:inline-block;background:var(--wa);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;margin:6px 4px;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(37,211,102,0.4);transition:.3s}
+.btn:hover{transform:translateY(-2px)}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
 
 .sosmed{margin-top:12px;display:flex;justify-content:center;gap:10px;flex-wrap:nowrap}
-.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:38px;height:38px;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
+.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:38px;height:38px;box-shadow:0 2px 6px rgba(0,0,0,0.15);transition:.3s}
+.sosmed a:hover{transform:scale(1.1)}
 .sosmed svg{width:20px;height:20px}
 .sosmed .tt{background:#000;color:#fff}.sosmed .yt{background:#FF0000;color:#fff}.sosmed .fb{background:#1877F2;color:#fff}.sosmed .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff}
 
@@ -32,18 +34,20 @@ h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:bloc
 
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px;padding:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
-.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center;transition:.3s}
+.card:hover{transform:translateY(-5px)}
 .card-img{width:100%;height:130px;object-fit:cover;display:block;border-radius:8px 8px 0 0}
 .card-content{padding:8px;font-size:11px;line-height:1.3}
 .card-content b{color:var(--biru);font-size:13px;display:block;margin-bottom:3px}
 
 .accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .accordion-item{border-bottom:1px solid #ddd;background:#fff}
-.accordion-header{width:100%;background:#fff;color:var(--biru);padding:15px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;align-items:center;justify-content:flex-start}
+.accordion-header{width:100%;background:#fff;color:var(--biru);padding:15px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;align-items:center;justify-content:flex-start;transition:.2s}
+.accordion-header:hover{background:#f1f1f1}
 .accordion-header::after{content:'+';margin-left:auto;font-size:18px;color:var(--biru2)}
 .accordion-header.active{background:var(--biru);color:#fff}
 .accordion-header.active::after{content:'-';color:#fff}
-.accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s;background:#f8f9fa}
+.accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease;background:#f8f9fa}
 .accordion-content table{width:100%;border-collapse:collapse;font-size:13px}
 .accordion-content td,th{padding:10px;border-bottom:1px solid #eee;text-align:left}
 .accordion-content th{background:var(--biru2);color:#fff}
@@ -54,12 +58,13 @@ form input,form select,form textarea{width:100%;padding:12px;margin:6px 0;border
 form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer}
 
 footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-size:13px}
-.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999}
+.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999;animation:den 2s infinite}
+@keyframes den{0%,100%{transform:scale(1)}50%{transform:scale(1.1)}}
 </style>
 </head>
 <body>
 
-<!-- HEADER -->
+<!-- 1. HEADER -->
 <header>
   <img src="logo.png" class="logo-banner" alt="Logo SM Teknik">
   <div class="header-content">
@@ -76,7 +81,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
   </div>
 </header>
 
-<!-- 10 LAYANAN DENGAN FOTO -->
+<!-- 2. 10 LAYANAN DENGAN FOTO -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
 <div class="card fade-in"><img src="service ac.jpg" alt="Service AC" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
@@ -91,11 +96,10 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- HARGA LENGKAP 10 LAYAN + FIX AC -->
+<!-- 3. HARGA LENGKAP 10 LAYANAN + FIX AC 3 LEVEL -->
 <section id="harga" style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
 
-<!-- 1. SERVICE AC - UDAH DI FIX -->
 <div class="accordion-item">
   <button class="accordion-header">
     <img src="https://cdn-icons-png.flaticon.com/512/1163/1163661.png" style="width:20px;margin-right:10px">
@@ -122,7 +126,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <div class="accordion-item"><button class="accordion-header">🧊 2. Service Kulkas</button><div class="accordion-content"><table><tr><td>Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon</td><td>Rp 250.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">💧 3. Service Dispenser</button><div class="accordion-content"><table><tr><td>Galon Atas</td><td>Rp 90.000</td></tr><tr><td>Galon Bawah</td><td>Rp 100.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🚿 4. Service Water Heater</button><div class="accordion-content"><table><tr><td>Water Heater Listrik</td><td>Rp 150.000</td></tr><tr><td>Water Heater Gas</td><td>Rp 120.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">⚡ 5. Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet</td><td>Rp 100.000</td></tr><tr><td>Instalasi Titik</td><td>Rp 80.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">⚡ 5. Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet</td><td>Rp 100.000</td></tr><tr><td>Instalasi Titik</td><td>Rp 80.000</td></tr><tr><td>Tambah Daya</td><td>Rp 150.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">📹 6. Pasang CCTV</button><div class="accordion-content"><table><tr><td>Paket 2 Kamera</td><td>Rp 1.200.000</td></tr><tr><td>Paket 4 Kamera</td><td>Rp 2.000.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🔧 7. Service Pompa Air</button><div class="accordion-content"><table><tr><td>Pompa Sanyo</td><td>Rp 120.000</td></tr><tr><td>Jet Pump</td><td>Rp 150.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">👕 8. Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>1 Tabung</td><td>Rp 150.000</td></tr><tr><td>2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
@@ -131,7 +135,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <div class="accordion-item"><button class="accordion-header">✅ 11. Cek & Konsultasi</button><div class="accordion-content"><p class="gratis">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
 
-<!-- FORM ORDER -->
+<!-- 4. FORM ORDER -->
 <section id="order"><div class="container"><h2 class="fade-in">Order Sekarang</h2>
 <form class="fade-in" onsubmit="kirimWA(event)">
 <input type="text" id="nama" placeholder="Nama Anda" required>
@@ -141,15 +145,15 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
-<!-- FOOTER -->
-<footer><p><b>SM TEKNIK JAKSEL</b></p><p>WA 1: 0822-8250-8521 | WA 2: 0813-6919-0759</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
+<!-- 5. FOOTER -->
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>WA 1: 0822-8250-8521 | WA 2: 0813-6919-0759</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan & Sekitarnya</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
-// JS FIX 3 LEVEL ACCORDION - INI KUNCINYA
+// JS FIX ACCORDION 3 LEVEL - BIAR AC SPLIT MUNCUL
 document.querySelectorAll(".accordion-header").forEach(btn => {
   btn.addEventListener("click", function(e) {
     e.stopPropagation();
@@ -159,7 +163,7 @@ document.querySelectorAll(".accordion-header").forEach(btn => {
     const siblings = parentItem.parentElement.querySelectorAll(':scope > .accordion-item > .accordion-content');
     siblings.forEach(c => { if(c !== content) c.style.maxHeight = null; });
     const siblingHeaders = parentItem.parentElement.querySelectorAll(':scope > .accordion-item > .accordion-header');
-    siblingHeaders.forEach(h => { if(h !== this) h.classList.remove('active'); });
+    siblings.forEach(h => { if(h !== this) h.classList.remove('active'); });
     if(!isOpen){
       this.classList.add('active');
       content.style.maxHeight = content.scrollHeight + "px";
