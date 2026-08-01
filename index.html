@@ -70,6 +70,7 @@ form button{width:100%;padding:13px;background:linear-gradient(135deg,var(--biru
 .bintang-input span.active{color:var(--kuning)}
 .list-ulasan{max-width:800px;margin:auto}
 .kartu-ulasan{background:#fff;padding:14px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
+.kartu-ulasan .nama{font-weight:bold;color:var(--biru)}
 
 footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-size:12px}
 .whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999}
@@ -124,7 +125,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <div class="accordion-item"><button class="accordion-header">👕 Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr><tr><td>Service Mesin Cuci 2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🔥 Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr><tr><td>Service Kompor 2 Tungku</td><td>Rp 120.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🌬️ Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas Angin</td><td>Rp 60.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
+<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYAN</p></div></div>
 </div></div></section>
 
 <section id="order"><div class="container"><h2 class="fade-in">Order Sekarang</h2>
@@ -151,7 +152,8 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
-const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
+// YANG INI TADI KURANG 1 KURUNG ) 
+const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}}}); // <-- TAMBAH ) DI AKHIR
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
 const acc = document.querySelectorAll(".accordion-header");
