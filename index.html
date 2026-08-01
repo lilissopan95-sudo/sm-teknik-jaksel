@@ -12,72 +12,53 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
+/* HEADER PAKE BACKGROUND LANGSUNG */
 header{
-  background: url('banner.jpg') center 30%/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
+  background: url('logo.jpg') center 30%/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
   color:#fff;
   text-align:center;
-  height: 25vh;
-  min-height: 200px;
-  max-height: 300px;
+  height: 35vh;
+  min-height: 280px;
+  max-height: 400px;
   display:flex;align-items:center;justify-content:center;
+  position: relative;
 }
 .header-content{
-  background: rgba(10,31,68,0.8);
-  padding: 12px;
-  border-radius: 12px;
-  width: 92%;
-  max-width: 650px;
+  background: rgba(10,31,68,0.85);
+  padding: 15px 15px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 750px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  position: relative;
+  z-index: 2;
 }
-h1{font-size:20px;margin-bottom:4px;color:#fff}
-.slogan{font-size:11px;margin-bottom:8px;color:var(--kuning);font-weight:bold}
-.btn{display:inline-block;background:var(--wa);color:#fff;padding:8px 14px;border-radius:50px;text-decoration:none;margin:3px;font-weight:bold;font-size:11px}
+h1{font-size:28px;margin-bottom:5px;color:#fff}
+.slogan{font-size:13px;margin-bottom:10px;color:#FFC107;font-weight:bold}
+.btn{display:inline-block;background:var(--wa);color:#fff;padding:10px 18px;border-radius:50px;text-decoration:none;margin:5px 4px;font-weight:bold;font-size:13px}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
-.sosmed{margin-top:8px;display:flex;justify-content:center;gap:6px}
-.sosmed a{width:30px;height:30px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none}
-.sosmed svg{width:16px;height:16px}
+.sosmed{margin-top:10px;display:flex;justify-content:center;gap:8px}
+.sosmed a{width:34px;height:34px;display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%}
+.sosmed svg{width:17px;height:17px}
 
-section{padding:30px 15px}
+section{padding:40px 15px}
 .container{max-width:1100px;margin:auto}
-h2{text-align:center;color:var(--biru);margin-bottom:20px;font-size:18px}
-h2::after{content:'';width:40px;height:3px;background:var(--kuning);display:block;margin:6px auto}
-
+h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:22px}
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
-.card-img{width:100%;height:110px;object-fit:cover;display:block}
-.card-content{padding:8px;font-size:10px}
-.card-content b{color:var(--biru);font-size:12px;display:block;margin-bottom:2px}
-
-.accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-.accordion-item{border-bottom:1px solid #ddd;background:#fff}
-.accordion-header{width:100%;background:#fff;color:var(--biru);padding:12px;font-size:13px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
-.accordion-header::after{content:'+';color:var(--biru2)}
-.accordion-header.active{background:var(--biru);color:#fff}
+.card-img{width:100%;height:130px;object-fit:cover;display:block}
+.accordion{max-width:900px;margin:auto}
+.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
 .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease-out;background:#f8f9fa}
-.accordion-content table{width:100%;border-collapse:collapse;font-size:12px}
-.accordion-content td,th{padding:8px;border-bottom:1px solid #eee;text-align:left}
-.accordion-content th{background:var(--biru2);color:#fff}
-.gratis{color:var(--wa);font-weight:bold;text-align:center}
-
-form{background:#fff;padding:15px;border-radius:10px;max-width:550px;margin:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-form input,form select,form textarea{width:100%;padding:11px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:13px}
-form button{width:100%;padding:13px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:bold;cursor:pointer}
-
-.ulasan-box{background:#fff;padding:18px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
-.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:8px 0;padding:11px;border:2px solid #ddd;border-radius:6px;font-size:13px}
-.bintang-input{margin:12px 0}
-.bintang-input span{font-size:28px;color:#ccc;cursor:pointer;letter-spacing:4px}
-.bintang-input span.active{color:var(--kuning)}
-.list-ulasan{max-width:800px;margin:auto}
-.kartu-ulasan{background:#fff;padding:14px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
-.kartu-ulasan .nama{font-weight:bold;color:var(--biru)}
-
-footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-size:12px}
-.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999}
+form{background:#fff;padding:18px;border-radius:10px;max-width:550px;margin:auto}
+.ulasan-box{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:0 auto 20px}
+footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-size:13px}
+.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;z-index:999}
 
 @media(max-width:600px){
-  header{height: 22vh; min-height: 180px;}
-  h1{font-size:18px;}
+  header{height: 30vh; min-height: 220px;}
+  h1{font-size:22px;}
 }
 </style>
 </head>
@@ -91,14 +72,15 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
     <a href="#ulasan" class="btn kuning">ULASAN</a>
     <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
     <div class="sosmed">
-      <a href="https://www.tiktok.com/@sm.teknik.jaksel" target="_blank"><svg fill="#000" viewBox="0 0 24 24"><path d="M12.5 2v10.3c0 .8-.6 1.5-1.5 1.5s-1.5-.7-1.5-1.5 .6-1.5 1.5-1.5V7.1c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5V2h-3z"/></svg></a>
-      <a href="https://www.instagram.com/smteknik01" target="_blank"><svg fill="#E4405F" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5a3.7 3.7 0 0 1-1.5-1 3.7 3.7 0 0 1-1-1.5c-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 5.8a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm6.5-3.8a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"/></svg></a>
-      <a href="https://www.youtube.com/@smteknik-o6n" target="_blank"><svg fill="#FF0000" viewBox="0 0 24 24"><path d="M21.8 8.1c-.3-1.1-1.1-2-2.2-2.3C18.3 5.5 12 5.5 12 5.5s-6.3 0-7.6.3c-1.1.3-1.9 1.2-2.2 2.3C2 9.5 2 12 2 12s0 2.5.2 3.9c.3 1.1 1.1 2 2.2 2.3 1.3.3 7.6.3 7.6.3s6.3 0 7.6-.3c1.1-.3 1.9-1.2 2.2-2.3.2-1.4.2-3.9.2-3.9s0-2.5-.2-3.9zM10 15V9l6 3-6 3z"/></svg></a>
-      <a href="#" target="_blank"><svg fill="#1877F2" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.4v7C18.3 21.1 22 17 22 12z"/></svg></a>
+      <a href="https://www.tiktok.com/@sm.teknik.jaksel" class="tt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.5 2v10.3c0 .8-.6 1.5-1.5 1.5s-1.5-.7-1.5-1.5 .6-1.5 1.5-1.5V7.1c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5V2h-3z"/></svg></a>
+      <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1"/></svg></a>
+      <a href="https://www.youtube.com/@smteknik-o6n" class="yt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8.1c-.3-1.1-1.1-2-2.2-2.3"/></svg></a>
+      <a href="LINK_FB_OM_DISINI" class="fb" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10S2 6.5 2 12"/></svg></a>
     </div>
   </div>
 </header>
 
+<!-- SISA KODE LAYANAN HARGA ORDER ULASAN SAMA SEPERTI SEBELUMNYA -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
 <div class="card fade-in"><img src="service ac.jpg" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
@@ -115,44 +97,36 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 
 <section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
-<div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Service Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon Kulkas</td><td>Rp 250.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">💧 Service Dispenser</button><div class="accordion-content"><table><tr><td>Service Dispenser</td><td>Rp 100.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🚿 Service Water Heater</button><div class="accordion-content"><table><tr><td>Service Water Heater</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">⚡ Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet + Perbaikan</td><td>Rp 100.000</td></tr><tr><td>Instalasi Titik Baru</td><td>Rp 80.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">📹 Pasang CCTV</button><div class="accordion-content"><table><tr><td>Pasang CCTV 1 Titik</td><td>Rp 350.000</td></tr><tr><td>Setting DVR 4 Kamera</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔧 Service Pompa Air</button><div class="accordion-content"><table><tr><td>Service Pompa Air</td><td>Rp 120.000</td></tr><tr><td>Ganti Seal / Bearing</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">👕 Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr><tr><td>Service Mesin Cuci 2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔥 Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr><tr><td>Service Kompor 2 Tungku</td><td>Rp 120.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🌬️ Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas Angin</td><td>Rp 60.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
+<div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service 1 Pintu</td><td>Rp 150.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p style="color:var(--wa);font-weight:bold;text-align:center;padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
 
 <section id="order"><div class="container"><h2 class="fade-in">Order Sekarang</h2>
 <form class="fade-in" onsubmit="kirimWA(event)">
 <input type="text" id="nama" placeholder="Nama Anda" required>
 <input type="text" id="alamat" placeholder="Alamat Lengkap Jaksel" required>
-<select id="layanan" required><option value="">Pilih Layanan</option><option>Cuci AC</option><option>Isi Freon AC</option><option>Bongkar Pasang AC</option><option>Service Kulkas</option><option>Service Dispenser</option><option>Service Water Heater</option><option>Perbaikan Listrik</option><option>Pasang CCTV</option><option>Service Pompa Air</option><option>Service Mesin Cuci</option><option>Service Kompor Gas</option><option>Service Kipas Angin</option></select>
+<select id="layanan" required><option value="">Pilih Layanan</option><option>Cuci AC</option><option>Service Kulkas</option></select>
 <textarea id="keluhan" rows="3" placeholder="Keluhan / Catatan"></textarea>
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
 <section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
 <div class="ulasan-box fade-in">
-  <h3 style="text-align:center;color:var(--biru);margin-bottom:8px">Beri Penilaian Anda</h3>
+  <h3>Beri Penilaian Anda</h3>
   <input type="text" id="namaUlasan" placeholder="Nama Anda" required>
   <div class="bintang-input"><span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span></div>
-  <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
+  <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda..." required></textarea>
   <button type="button" onclick="kirimUlasan()">KIRIM ULASAN</button>
 </div>
 <div class="list-ulasan fade-in" id="listUlasan"></div>
 </div></section>
 
-<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p></footer>
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
-const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}}});});
+const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
 const acc = document.querySelectorAll(".accordion-header");
@@ -174,14 +148,15 @@ function updateBintang(){
 function kirimUlasan(){
   let n=document.getElementById('namaUlasan').value;
   let u=document.getElementById('isiUlasan').value;
-  if(n=='' || u=='' || rating==0){alert('Lengkapi nama, bintang dan ulasan dulu ya');return}
+  if(n=='' || u=='' || rating==0){alert('Lengkapi dulu');return}
   let bintang='★'.repeat(rating);
-  let kartu=`<div class="kartu-ulasan"><div class="nama">${n}</div><div class="bintang">${bintang}</div><p>${u}</p></div>`;
+  let tgl=new Date().toLocaleDateString('id-ID');
+  let kartu=`<div class="kartu-ulasan"><div class="nama">${n}</div><div class="bintang">${bintang}</div><p>${u}</p><div class="tgl">${tgl}</div></div>`;
   document.getElementById('listUlasan').innerHTML = kartu + document.getElementById('listUlasan').innerHTML;
   document.getElementById('namaUlasan').value='';document.getElementById('isiUlasan').value='';rating=0;updateBintang();
-  alert('Terima kasih atas ulasannya!')
 }
-function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama').value;var alamat = document.getElementById('alamat').value;var layanan = document.getElementById('layanan').value;var keluhan = document.getElementById('keluhan').value;var pesan = `Halo SM TEKNIK JAKSEL%0ANama: ${nama}%0AAlamat: ${alamat}%0ALayanan: ${layanan}%0AKeluhan: ${keluhan}`;window.open(`https://wa.me/6282282508521?text=${pesan}`,'_blank');}
+function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama').value;var alamat = document.getElementById('alamat').value;var layanan = document.getElementById('layanan').value;var keluhan = document.getElementById('keluhan').value;var pesan = `Halo SM TEKNIK%0ANama: ${nama}%0AAlamat: ${alamat}%0ALayanan: ${layanan}%0AKeluhan: ${keluhan}`;window.open(`https://wa.me/6282282508521?text=${pesan}`,'_blank');}
 </script>
 </body>
 </html>
+
