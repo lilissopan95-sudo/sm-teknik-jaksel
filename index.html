@@ -22,7 +22,7 @@ header{
   display:flex;align-items:center;justify-content:center;
 }
 .header-content{
-  background: rgba(10,31,68,0.75); /* DITURUNIN DARI 0.9 JADI 0.75 BIAR GA KEGELAPAN */
+  background: rgba(10,31,68,0.9);
   padding: 15px;
   border-radius: 15px;
   width: 90%;
@@ -98,7 +98,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
   </div>
 </header>
 
-<!-- 10 LAYANAN -->
+<!-- 10 LAYANAN LENGKAP -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
 <div class="card fade-in"><img src="service ac.jpg" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
@@ -113,7 +113,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <div class="card fade-in"><img src="kipas angin.jpg" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- 11 HARGA -->
+<!-- 11 HARGA LENGKAP -->
 <section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
 <div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div></div>
@@ -126,7 +126,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <div class="accordion-item"><button class="accordion-header">👕 Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr><tr><td>Service Mesin Cuci 2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🔥 Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr><tr><td>Service Kompor 2 Tungku</td><td>Rp 120.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🌬️ Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas Angin</td><td>Rp 60.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYAN</p></div></div>
+<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
 
 <!-- ORDER -->
@@ -149,7 +149,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
   <button type="button" onclick="kirimUlasan()">KIRIM ULASAN</button>
 </div>
 <div class="list-ulasan fade-in" id="listUlasan">
-  <div class="kartu-ulasan"><div class="nama">Budi - Jakarta Selatan</div><div class="bintang">★★★</div><p>Teknisi ramah, kerja cepat dan rapi. AC langsung dingin lagi. Recommended!</p></div>
+  <div class="kartu-ulasan"><div class="nama">Budi - Jakarta Selatan</div><div class="bintang">★★★★★</div><p>Teknisi ramah, kerja cepat dan rapi. AC langsung dingin lagi. Recommended!</p></div>
 </div>
 </div></section>
 
@@ -160,13 +160,12 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 
-// YANG INI DIBENERIN KURUNGNYA
 const acc = document.querySelectorAll(".accordion-header");
 acc.forEach(btn => {btn.addEventListener("click", function() {
   this.classList.toggle("active");
   const content = this.nextElementSibling;
   content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-}); // <-- INI TADI YANG KURANG
+});});
 
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
