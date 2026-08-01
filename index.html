@@ -16,19 +16,19 @@ header{
   background: url('banner.jpg') center 30%/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
   color:#fff;
   text-align:center;
-  height: 25vh; /* DIKECILIN DARI 35vh JADI 25vh */
+  height: 25vh;
   min-height: 200px;
   max-height: 300px;
   display:flex;align-items:center;justify-content:center;
 }
 .header-content{
-  background: rgba(10,31,68,0.8); /* 0.8 biar foto masih keliatan */
+  background: rgba(10,31,68,0.8);
   padding: 12px;
   border-radius: 12px;
   width: 92%;
   max-width: 650px;
 }
-h1{font-size:20px;margin-bottom:4px}
+h1{font-size:20px;margin-bottom:4px;color:#fff}
 .slogan{font-size:11px;margin-bottom:8px;color:var(--kuning);font-weight:bold}
 .btn{display:inline-block;background:var(--wa);color:#fff;padding:8px 14px;border-radius:50px;text-decoration:none;margin:3px;font-weight:bold;font-size:11px}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
@@ -70,8 +70,6 @@ form button{width:100%;padding:13px;background:linear-gradient(135deg,var(--biru
 .bintang-input span.active{color:var(--kuning)}
 .list-ulasan{max-width:800px;margin:auto}
 .kartu-ulasan{background:#fff;padding:14px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
-.kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:14px}
-.kartu-ulasan .bintang{color:var(--kuning);font-size:15px;margin:4px 0}
 
 footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-size:12px}
 .whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;z-index:999}
@@ -100,7 +98,6 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
   </div>
 </header>
 
-<!-- 10 LAYANAN LENGKAP -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
 <div class="card fade-in"><img src="service ac.jpg" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
@@ -115,7 +112,6 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <div class="card fade-in"><img src="kipas angin.jpg" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- 11 DAFTAR HARGA LENGKAP -->
 <section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
 <div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div></div>
@@ -131,7 +127,6 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
 
-<!-- ORDER SESUAI -->
 <section id="order"><div class="container"><h2 class="fade-in">Order Sekarang</h2>
 <form class="fade-in" onsubmit="kirimWA(event)">
 <input type="text" id="nama" placeholder="Nama Anda" required>
@@ -141,7 +136,6 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
-<!-- ULASAN + RATING -->
 <section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
 <div class="ulasan-box fade-in">
   <h3 style="text-align:center;color:var(--biru);margin-bottom:8px">Beri Penilaian Anda</h3>
@@ -150,19 +144,10 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
   <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
   <button type="button" onclick="kirimUlasan()">KIRIM ULASAN</button>
 </div>
-<div class="list-ulasan fade-in" id="listUlasan">
-  <div class="kartu-ulasan"><div class="nama">Budi - Jakarta Selatan</div><div class="bintang">★★★</div><p>Teknisi ramah, kerja cepat dan rapi. AC langsung dingin lagi. Recommended!</p></div>
-  <div class="kartu-ulasan"><div class="nama">Siti - Pancoran</div><div class="bintang">★★★★☆</div><p>Harga transparan, tidak ada biaya tersembunyi. Puas dengan pelayanannya.</p></div>
-</div>
+<div class="list-ulasan fade-in" id="listUlasan"></div>
 </div></section>
 
-<!-- FOOTER LENGKAP -->
-<footer>
-  <p><b>SM TEKNIK JAKSEL</b></p>
-  <p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p>
-  <p>Email: smteknik01@gmail.com</p>
-  <p style="margin-top:8px">© 2026 SM TEKNIK. Melayani Jakarta Selatan & Sekitarnya</p>
-</footer>
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
@@ -174,7 +159,7 @@ acc.forEach(btn => {btn.addEventListener("click", function() {
   this.classList.toggle("active");
   const content = this.nextElementSibling;
   content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-}); // INI YANG TADI KURANG
+});});
 
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
@@ -189,7 +174,7 @@ function kirimUlasan(){
   let n=document.getElementById('namaUlasan').value;
   let u=document.getElementById('isiUlasan').value;
   if(n=='' || u=='' || rating==0){alert('Lengkapi nama, bintang dan ulasan dulu ya');return}
-  let bintang='★'.repeat(rating)+'☆'.repeat(5-rating);
+  let bintang='★'.repeat(rating);
   let kartu=`<div class="kartu-ulasan"><div class="nama">${n}</div><div class="bintang">${bintang}</div><p>${u}</p></div>`;
   document.getElementById('listUlasan').innerHTML = kartu + document.getElementById('listUlasan').innerHTML;
   document.getElementById('namaUlasan').value='';document.getElementById('isiUlasan').value='';rating=0;updateBintang();
