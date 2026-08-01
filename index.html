@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -12,55 +13,52 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
-/* HEADER PAKE IMG BUKAN BACKGROUND */
+/* HEADER RESPONSIVE */
 header{
   position: relative;
   color:#fff;
   text-align:center;
-  min-height: 650px;
+  min-height: 400px; /* dikecilin dari 650px */
   display:flex;align-items:flex-end;justify-content:center;
   padding-bottom: 30px;
   overflow: hidden;
-  background: linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%); /* fallback biru */
+  background: linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
 }
 .header-bg{
   position: absolute;
   top: 0; left: 0;
   width: 100%; height: 100%;
   object-fit: cover;
+  object-position: center top; /* fokus ke atas biar teknisi kelihatan */
   z-index: -1;
 }
-.logo-banner{display:none;}
 .header-content{
   position: relative;
   background: rgba(10,31,68,0.9);
-  padding: 20px 15px;
+  padding: 15px 12px;
   border-radius: 15px;
   width: 95%;
   max-width: 800px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  margin: 0 10px;
 }
-h1{display:none;}
-.slogan{display:none;}
-.btn{display:inline-block;background:var(--wa);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;margin:6px 4px;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
+.btn{display:inline-block;background:var(--wa);color:#fff;padding:10px 18px;border-radius:50px;text-decoration:none;margin:5px 3px;font-weight:bold;font-size:13px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
-
-.sosmed{margin-top:12px;display:flex;justify-content:center;gap:10px;flex-wrap:nowrap}
-.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:38px;height:38px;box-shadow:0 2px 6px rgba(0,0,0,0.15)}
-.sosmed svg{width:20px;height:20px}
+.sosmed{margin-top:10px;display:flex;justify-content:center;gap:8px}
+.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:35px;height:35px}
+.sosmed svg{width:18px;height:18px}
 .sosmed .tt{background:#000;color:#fff}.sosmed .yt{background:#FF0000;color:#fff}.sosmed .fb{background:#1877F2;color:#fff}.sosmed .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff}
 
-section{padding:45px 15px}
+section{padding:40px 15px}
 .container{max-width:1100px;margin:auto}
-h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:24px}
+h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:22px}
 h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:block;margin:8px auto}
 
-.grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px;padding:10px}
+.grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
-.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center;transition:0.3s}
-.card:hover{transform:translateY(-5px)}
-.card-img{width:100%;height:130px;object-fit:cover;display:block;border-radius:8px 8px 0 0}
-.card-content{padding:8px;font-size:11px;line-height:1.3}
+.card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+.card-img{width:100%;height:130px;object-fit:cover;display:block}
+.card-content{padding:8px;font-size:11px}
 .card-content b{color:var(--biru);font-size:13px;display:block;margin-bottom:3px}
 
 .accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
@@ -79,21 +77,23 @@ form{background:#fff;padding:18px;border-radius:10px;max-width:550px;margin:auto
 form input,form select,form textarea{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:14px}
 form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer}
 
-.ulasan-box{background:#fff;padding:25px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
-.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:10px 0;padding:12px;border:2px solid #ddd;border-radius:6px;font-size:14px;font-family:'Segoe UI',Arial}
+.ulasan-box{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:10px 0;padding:12px;border:2px solid #ddd;border-radius:6px;font-size:14px}
 .bintang-input{margin:15px 0}
-.bintang-input span{font-size:35px;color:#ccc;cursor:pointer;transition:.2s;letter-spacing:5px}
+.bintang-input span{font-size:30px;color:#ccc;cursor:pointer;letter-spacing:5px}
 .bintang-input span.active{color:var(--kuning)}
-.ulasan-box button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer;margin-top:10px}
-
 .list-ulasan{max-width:800px;margin:auto}
-.kartu-ulasan{background:#fff;padding:15px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);text-align:left;border-left:4px solid var(--kuning)}
-.kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:15px}
-.kartu-ulasan .bintang{color:var(--kuning);font-size:16px;margin:4px 0}
-.kartu-ulasan .tgl{font-size:12px;color:#777}
+.kartu-ulasan{background:#fff;padding:15px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
 
 footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-size:13px}
 .whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999}
+
+/* HP KECIL */
+@media(max-width:600px){
+  header{min-height: 300px;}
+  .header-content{padding: 12px 8px;}
+  .btn{font-size:12px;padding:8px 14px;}
+}
 </style>
 </head>
 <body>
@@ -106,86 +106,77 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
     <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
     <div class="sosmed">
       <a href="https://www.tiktok.com/@sm.teknik.jaksel" class="tt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.5 2v10.3c0 .8-.6 1.5-1.5 1.5s-1.5-.7-1.5-1.5 .6-1.5 1.5-1.5V7.1c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5V2h-3z"/></svg></a>
-      <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5a3.7 3.7 0 0 1-1.5-1 3.7 3.7 0 0 1-1-1.5c-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2zm0 1.8c-3.1 0-3.5 0-4.7.1-1 .1-1.6.2-2 .4-.5.2-.8.4-1.2.8-.4.4-.6.7-.8 1.2-.2.4-.3 1-.4 2-.1 1.2-.1 1.6-.1 4.7s0 3.5.1 4.7c.1 1 .2 1.6.4 2 .2.5.4.8.8 1.2.4.4.7.6 1.2.8.4.2 1 .3 2 .4 1.2.1 1.6.1 4.7.1s3.5 0 4.7-.1c1-.1 1.6-.2 2-.4.5-.2.8-.4 1.2-.8.4-.4.6-.7.8-1.2.2-.4.3-1 .4-2 .1-1.2.1-1.6.1-4.7s0-3.5-.1-4.7c-.1-1-.2-1.6-.4-2-.2-.5-.4-.8-.8-1.2-.4-.4-.7-.6-1.2-.8-.4-.2-1-.3-2-.4-1.2-.1-1.6-.1-4.7-.1zm0 3.6a5.4 5.4 0 1 1 0 10.8 5.4 5.4 0 0 1 0-10.8zm0 1.8a3.6 3.6 0 1 0 0 7.2 3.6 3.6 0 0 0 0-7.2zm5.5-1.9a1.3 1.3 0 1 1 0 2.6 1.3 1.3 0 0 1 0-2.6z"/></svg></a>
+      <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5a3.7 3.7 0 0 1-1.5-1 3.7 3.7 0 0 1-1-1.5c-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
       <a href="https://www.youtube.com/@smteknik-o6n" class="yt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8.1c-.3-1.1-1.1-2-2.2-2.3C18.3 5.5 12 5.5 12 5.5s-6.3 0-7.6.3c-1.1.3-1.9 1.2-2.2 2.3C2 9.5 2 12 2 12s0 2.5.2 3.9c.3 1.1 1.1 2 2.2 2.3 1.3.3 7.6.3 7.6.3s6.3 0 7.6-.3c1.1-.3 1.9-1.2 2.2-2.3.2-1.4.2-3.9.2-3.9s0-2.5-.2-3.9zM10 15V9l6 3-6 3z"/></svg></a>
-      <a href="LINK_FB_OM_DISINI" class="fb" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.4v7C18.3 21.1 22 17 22 12z"/></svg></a>
+      <a href="LINK_FB_OM_DISINI" class="fb" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.4v7C18.3 21.1 22 17 22 12z"/></svg></a>
     </div>
   </div>
 </header>
 
-<!-- 10 LAYAN LENGKAP -->
 <section id="layanan"><div class="container"><h2 class="fade-in">Layanan Kami</h2>
 <div class="grid">
-<div class="card fade-in"><img src="service ac.jpg" alt="Service AC" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
-<div class="card fade-in"><img src="kulkas.jpg" alt="Service Kulkas" class="card-img"><div class="card-content"><b>🧊 Service Kulkas</b>Tidak Dingin, Bocor, Mati Total</div></div>
-<div class="card fade-in"><img src="servis dispenser.jpg" alt="Service Dispenser" class="card-img"><div class="card-content"><b>💧 Service Dispenser</b>Tidak Dingin/Panas, Bocor</div></div>
-<div class="card fade-in"><img src="water heater.jpg" alt="Service Water Heater" class="card-img"><div class="card-content"><b>🚿 Service Water Heater</b>Tidak Panas, Bocor, Korslet</div></div>
-<div class="card fade-in"><img src="intalasi listrik.jpg" alt="Listrik Rumah" class="card-img"><div class="card-content"><b>⚡ Listrik Rumah</b>Instalasi, Tambah Daya, Korslet</div></div>
-<div class="card fade-in"><img src="cctv.jpg" alt="Pasang CCTV" class="card-img"><div class="card-content"><b>📹 Pasang CCTV</b>Pemasangan, Setting DVR</div></div>
-<div class="card fade-in"><img src="pompa air.jpg" alt="Service Pompa Air" class="card-img"><div class="card-content"><b>🔧 Service Pompa Air</b>Tidak Nyala, Lemah, Bocor</div></div>
-<div class="card fade-in"><img src="mesin cuci.jpg" alt="Service Mesin Cuci" class="card-img"><div class="card-content"><b>👕 Service Mesin Cuci</b>1 Tabung, 2 Tabung, Error</div></div>
-<div class="card fade-in"><img src="kompor gas.jpg" alt="Service Kompor Gas" class="card-img"><div class="card-content"><b>🔥 Service Kompor Gas</b>Api Kecil, Tidak Nyala</div></div>
-<div class="card fade-in"><img src="kipas angin.jpg" alt="Service Kipas Angin" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
+<div class="card fade-in"><img src="service ac.jpg" class="card-img"><div class="card-content"><b>❄️ Service AC</b>Cuci AC, Isi Freon, Bongkar Pasang</div></div>
+<div class="card fade-in"><img src="kulkas.jpg" class="card-img"><div class="card-content"><b>🧊 Service Kulkas</b>Tidak Dingin, Bocor, Mati Total</div></div>
+<div class="card fade-in"><img src="servis dispenser.jpg" class="card-img"><div class="card-content"><b>💧 Service Dispenser</b>Tidak Dingin/Panas, Bocor</div></div>
+<div class="card fade-in"><img src="water heater.jpg" class="card-img"><div class="card-content"><b>🚿 Service Water Heater</b>Tidak Panas, Bocor, Korslet</div></div>
+<div class="card fade-in"><img src="intalasi listrik.jpg" class="card-img"><div class="card-content"><b>⚡ Listrik Rumah</b>Instalasi, Tambah Daya, Korslet</div></div>
+<div class="card fade-in"><img src="cctv.jpg" class="card-img"><div class="card-content"><b>📹 Pasang CCTV</b>Pemasangan, Setting DVR</div></div>
+<div class="card fade-in"><img src="pompa air.jpg" class="card-img"><div class="card-content"><b>🔧 Service Pompa Air</b>Tidak Nyala, Lemah, Bocor</div></div>
+<div class="card fade-in"><img src="mesin cuci.jpg" class="card-img"><div class="card-content"><b>👕 Service Mesin Cuci</b>1 Tabung, 2 Tabung, Error</div></div>
+<div class="card fade-in"><img src="kompor gas.jpg" class="card-img"><div class="card-content"><b>🔥 Service Kompor Gas</b>Api Kecil, Tidak Nyala</div></div>
+<div class="card fade-in"><img src="kipas angin.jpg" class="card-img"><div class="card-content"><b>🌬️ Service Kipas Angin</b>Tidak Muter, Berisik</div></div>
 </div></div></section>
 
-<!-- 11 HARGA LENGKAP -->
 <section style="background:#e3f2fd"><div class="container"><h2 class="fade-in">Daftar Harga Transparan</h2>
 <div class="accordion fade-in">
-<div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon R32/R410</td><td>Rp 250.000</td><td>Rp 350.000</td></tr><tr><td>Bongkar Pasang</td><td>Rp 350.000</td><td>Rp 450.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service Kulkas 1 Pintu</td><td>Rp 150.000</td></tr><tr><td>Service Kulkas 2 Pintu</td><td>Rp 200.000</td></tr><tr><td>Isi Freon Kulkas</td><td>Rp 250.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">❄️ Service AC Semua Tipe & PK</button><div class="accordion-content"><table><tr><th>Layanan</th><th>1/2 - 1 PK</th><th>1.5 - 2 PK</th></tr><tr><td>Cuci AC</td><td>Rp 80.000</td><td>Rp 120.000</td></tr><tr><td>Isi Freon</td><td>Rp 250.000</td><td>Rp 350.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🧊 Service Kulkas</button><div class="accordion-content"><table><tr><td>Service 1 Pintu</td><td>Rp 150.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">💧 Service Dispenser</button><div class="accordion-content"><table><tr><td>Service Dispenser</td><td>Rp 100.000</td></tr></table></div></div>
 <div class="accordion-item"><button class="accordion-header">🚿 Service Water Heater</button><div class="accordion-content"><table><tr><td>Service Water Heater</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">⚡ Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet + Perbaikan</td><td>Rp 100.000</td></tr><tr><td>Instalasi Titik Baru</td><td>Rp 80.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">📹 Pasang CCTV</button><div class="accordion-content"><table><tr><td>Pasang CCTV 1 Titik</td><td>Rp 350.000</td></tr><tr><td>Setting DVR 4 Kamera</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔧 Service Pompa Air</button><div class="accordion-content"><table><tr><td>Service Pompa Air</td><td>Rp 120.000</td></tr><tr><td>Ganti Seal / Bearing</td><td>Rp 150.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">👕 Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>Service Mesin Cuci 1 Tabung</td><td>Rp 150.000</td></tr><tr><td>Service Mesin Cuci 2 Tabung</td><td>Rp 180.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🔥 Service Kompor Gas</button><div class="accordion-content"><table><tr><td>Service Kompor 1 Tungku</td><td>Rp 80.000</td></tr><tr><td>Service Kompor 2 Tungku</td><td>Rp 120.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">🌬️ Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas Angin</td><td>Rp 60.000</td></tr></table></div></div>
-<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYAN</p></div></div>
+<div class="accordion-item"><button class="accordion-header">⚡ Perbaikan Listrik</button><div class="accordion-content"><table><tr><td>Cek Korslet</td><td>Rp 100.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">📹 Pasang CCTV</button><div class="accordion-content"><table><tr><td>Pasang 1 Titik</td><td>Rp 350.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🔧 Service Pompa Air</button><div class="accordion-content"><table><tr><td>Service Pompa</td><td>Rp 120.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">👕 Service Mesin Cuci</button><div class="accordion-content"><table><tr><td>1 Tabung</td><td>Rp 150.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🔥 Service Kompor Gas</button><div class="accordion-content"><table><tr><td>1 Tungku</td><td>Rp 80.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">🌬️ Service Kipas Angin</button><div class="accordion-content"><table><tr><td>Service Kipas</td><td>Rp 60.000</td></tr></table></div></div>
+<div class="accordion-item"><button class="accordion-header">✅ Cek & Konsultasi</button><div class="accordion-content"><p class="gratis" style="padding:12px">GRATIS UNTUK SEMUA LAYANAN</p></div></div>
 </div></div></section>
 
-<!-- ORDER -->
 <section id="order"><div class="container"><h2 class="fade-in">Order Sekarang</h2>
 <form class="fade-in" onsubmit="kirimWA(event)">
 <input type="text" id="nama" placeholder="Nama Anda" required>
 <input type="text" id="alamat" placeholder="Alamat Lengkap Jaksel" required>
-<select id="layanan" required>
-  <option value="">Pilih Layanan</option>
-  <option>Cuci AC</option><option>Isi Freon AC</option><option>Bongkar Pasang AC</option>
-  <option>Service Kulkas</option><option>Service Dispenser</option><option>Service Water Heater</option>
-  <option>Perbaikan Listrik</option><option>Pasang CCTV</option>
-  <option>Service Pompa Air</option><option>Service Mesin Cuci</option>
-  <option>Service Kompor Gas</option><option>Service Kipas Angin</option>
-</select>
+<select id="layanan" required><option value="">Pilih Layanan</option><option>Cuci AC</option><option>Service Kulkas</option><option>Perbaikan Listrik</option></select>
 <textarea id="keluhan" rows="3" placeholder="Keluhan / Catatan"></textarea>
 <button type="submit">KIRIM KE WHATSAPP</button>
 </form></div></section>
 
-<!-- ULASAN PELANGGAN -->
 <section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
 <div class="ulasan-box fade-in">
-  <h3 style="text-align:center;color:var(--biru);margin-bottom:10px">Beri Penilaian Anda</h3>
+  <h3>Beri Penilaian Anda</h3>
   <input type="text" id="namaUlasan" placeholder="Nama Anda" required>
-  <div class="bintang-input">
-    <span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span>
-  </div>
-  <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
+  <div class="bintang-input"><span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span></div>
+  <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda..." required></textarea>
   <button type="button" onclick="kirimUlasan()">KIRIM ULASAN</button>
 </div>
 <div class="list-ulasan fade-in" id="listUlasan">
-  <div class="kartu-ulasan"><div class="nama">Budi - Jakarta Selatan</div><div class="bintang">★★★★★</div><p>Teknisi ramah, kerja cepat dan rapi. AC langsung dingin lagi. Recommended!</p><div class="tgl">29 Juli 2026</div></div>
-  <div class="kartu-ulasan"><div class="nama">Siti - Pancoran</div><div class="bintang">★★★★☆</div><p>Harga transparan, tidak ada biaya tersembunyi. Puas dengan pelayanannya.</p><div class="tgl">28 Juli 2026</div></div>
+  <div class="kartu-ulasan"><div class="nama">Budi - Jaksel</div><div class="bintang">★★★★★</div><p>Teknisi ramah, kerja cepat dan rapi.</p><div class="tgl">29 Juli 2026</div></div>
 </div>
 </div></section>
 
-<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
+
 const acc = document.querySelectorAll(".accordion-header");
-acc.forEach(btn => {btn.addEventListener("click", function() {this.classList.toggle("active");const content = this.nextElementSibling;content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";});});
+acc.forEach(btn => {btn.addEventListener("click", function() {
+  this.classList.toggle("active");
+  const content = this.nextElementSibling;
+  content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
+});});
 
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
@@ -199,16 +190,15 @@ function updateBintang(){
 function kirimUlasan(){
   let n=document.getElementById('namaUlasan').value;
   let u=document.getElementById('isiUlasan').value;
-  if(n=='' || u=='' || rating==0){alert('Lengkapi nama, bintang dan ulasan dulu ya');return}
-  let bintang='★'.repeat(rating)+'☆'.repeat(5-rating);
-  let tgl=new Date().toLocaleDateString('id-ID',{day:'numeric',month:'long',year:'numeric'});
+  if(n=='' || u=='' || rating==0){alert('Lengkapi dulu');return}
+  let bintang='★'.repeat(rating);
+  let tgl=new Date().toLocaleDateString('id-ID');
   let kartu=`<div class="kartu-ulasan"><div class="nama">${n}</div><div class="bintang">${bintang}</div><p>${u}</p><div class="tgl">${tgl}</div></div>`;
   document.getElementById('listUlasan').innerHTML = kartu + document.getElementById('listUlasan').innerHTML;
   document.getElementById('namaUlasan').value='';document.getElementById('isiUlasan').value='';rating=0;updateBintang();
-  alert('Terima kasih atas ulasannya!')
+  alert('Terima kasih!')
 }
-
-function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama').value;var alamat = document.getElementById('alamat').value;var layanan = document.getElementById('layanan').value;var keluhan = document.getElementById('keluhan').value;var pesan = `Halo SM TEKNIK JAKSEL%0ANama: ${nama}%0AAlamat: ${alamat}%0ALayanan: ${layanan}%0AKeluhan: ${keluhan}`;window.open(`https://wa.me/6282282508521?text=${pesan}`,'_blank');}
+function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama').value;var alamat = document.getElementById('alamat').value;var layanan = document.getElementById('layanan').value;var keluhan = document.getElementById('keluhan').value;var pesan = `Halo SM TEKNIK%0ANama: ${nama}%0AAlamat: ${alamat}%0ALayanan: ${layanan}%0AKeluhan: ${keluhan}`;window.open(`https://wa.me/6282282508521?text=${pesan}`,'_blank');}
 </script>
 </body>
 </html>
