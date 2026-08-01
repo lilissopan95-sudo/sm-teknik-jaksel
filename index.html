@@ -12,26 +12,26 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
-/* HEADER PAKE BANNER BARU OM */
+/* HEADER PAKE BANNER logo.jpg */
 header{
-  background: url('logo.png') center top/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
+  background: url('logo.jpg') center top/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
   color:#fff;
   text-align:center;
-  min-height: 650px; /* Tinggi biar banner keliatan full */
+  min-height: 650px;
   display:flex;align-items:flex-end;justify-content:center;
   padding-bottom: 30px;
 }
 .logo-banner{display:none;}
 .header-content{
-  background: rgba(10,31,68,0.9); /* Lapisan biru transparan biar tombol kebaca */
+  background: rgba(10,31,68,0.9);
   padding: 20px 15px;
   border-radius: 15px;
   width: 95%;
   max-width: 800px;
   box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-h1{display:none;} /* Disembunyikan karena udah ada di banner */
-.slogan{display:none;} /* Disembunyikan karena udah ada di banner */
+h1{display:none;}
+.slogan{display:none;}
 .btn{display:inline-block;background:var(--wa);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;margin:6px 4px;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
 
@@ -90,7 +90,6 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 
 <header>
   <div class="header-content">
-    <!-- Tulisan SM TEKNIK udah ada di banner, jadi kita kasih tombol aja -->
     <a href="#layanan" class="btn">LAYANAN</a>
     <a href="#ulasan" class="btn kuning">ULASAN</a>
     <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
@@ -175,9 +174,8 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 const acc = document.querySelectorAll(".accordion-header");
-acc.forEach(btn => {btn.addEventListener("click", function() {this.classList.toggle("active");const content = this.nextElementSibling;content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";});});
+acc.forEach(btn => {btn.addEventListener("click", function() {this.classList.toggle("active");const content = this.nextElementSibling;content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";});
 
-// SISTEM ULASAN
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
   b.addEventListener('click',()=>{rating=b.dataset.b;updateBintang()})
