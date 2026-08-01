@@ -12,20 +12,26 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
-/* HEADER PAKE LOGO.PNG JADI BACKGROUND */
+/* HEADER PAKE BANNER BARU OM */
 header{
-  background: 
-    linear-gradient(135deg, rgba(10,31,68,0.92) 0%, rgba(25,118,210,0.92) 100%),
-    url('logo.png') center/cover no-repeat;
+  background: url('logo.png') center top/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
   color:#fff;
   text-align:center;
-  min-height: 320px;
-  display:flex;align-items:center;justify-content:center
+  min-height: 650px; /* Tinggi biar banner keliatan full */
+  display:flex;align-items:flex-end;justify-content:center;
+  padding-bottom: 30px;
 }
 .logo-banner{display:none;}
-.header-content{padding:35px 15px}
-h1{font-size:32px;margin:10px 0;text-shadow:2px 2px 6px rgba(0,0,0,0.5)}
-.slogan{color:var(--kuning);font-weight:bold;font-size:15px;text-shadow:1px 1px 3px rgba(0,0,0,0.4)}
+.header-content{
+  background: rgba(10,31,68,0.9); /* Lapisan biru transparan biar tombol kebaca */
+  padding: 20px 15px;
+  border-radius: 15px;
+  width: 95%;
+  max-width: 800px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+h1{display:none;} /* Disembunyikan karena udah ada di banner */
+.slogan{display:none;} /* Disembunyikan karena udah ada di banner */
 .btn{display:inline-block;background:var(--wa);color:#fff;padding:12px 24px;border-radius:50px;text-decoration:none;margin:6px 4px;font-weight:bold;font-size:14px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
 
@@ -84,9 +90,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 
 <header>
   <div class="header-content">
-    <h1>SM TEKNIK JAKSEL</h1>
-    <p class="slogan">SOLUSI TEPAT, TEKNISI HEBAT, SEMUA BISA</p>
-    <p style="margin:6px 0;font-size:13px">✅ Profesional • ✅ Bergaransi • ✅ Respon Cepat</p>
+    <!-- Tulisan SM TEKNIK udah ada di banner, jadi kita kasih tombol aja -->
     <a href="#layanan" class="btn">LAYANAN</a>
     <a href="#ulasan" class="btn kuning">ULASAN</a>
     <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
@@ -164,7 +168,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 </div>
 </div></section>
 
-<footer><p><b>SM TEKNIK JAKSEL</b></p><p>WA 1: 0822-8250-8521 | WA 2: 0813-6919-0759</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px;font-size:13px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
