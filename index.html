@@ -12,17 +12,27 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
-/* HEADER PAKE BANNER logo.jpg */
+/* HEADER PAKE IMG BUKAN BACKGROUND */
 header{
- background: url('https://lilissopan95-sudo.github.io/sm-teknik-jaksel/logo.jpg') center top/cover no-repeat, linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
+  position: relative;
   color:#fff;
   text-align:center;
   min-height: 650px;
   display:flex;align-items:flex-end;justify-content:center;
   padding-bottom: 30px;
+  overflow: hidden;
+  background: linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%); /* fallback biru */
+}
+.header-bg{
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
 .logo-banner{display:none;}
 .header-content{
+  position: relative;
   background: rgba(10,31,68,0.9);
   padding: 20px 15px;
   border-radius: 15px;
@@ -89,6 +99,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 <body>
 
 <header>
+  <img src="logo.jpg" alt="Banner SM Teknik" class="header-bg">
   <div class="header-content">
     <a href="#layanan" class="btn">LAYANAN</a>
     <a href="#ulasan" class="btn kuning">ULASAN</a>
@@ -174,7 +185,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-siz
 const observer = new IntersectionObserver((entries)=>{entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})});
 document.querySelectorAll('.fade-in').forEach(el=>observer.observe(el));
 const acc = document.querySelectorAll(".accordion-header");
-acc.forEach(btn => {btn.addEventListener("click", function() {this.classList.toggle("active");const content = this.nextElementSibling;content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";});
+acc.forEach(btn => {btn.addEventListener("click", function() {this.classList.toggle("active");const content = this.nextElementSibling;content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";});});
 
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
