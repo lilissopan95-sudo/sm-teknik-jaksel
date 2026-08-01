@@ -12,14 +12,16 @@ body{background:#f8f9fa}
 .fade-in{opacity:0;transform:translateY(30px);transition:1s}
 .fade-in.show{opacity:1;transform:translateY(0)}
 
-/* HEADER DIKECILIN BIAR GA TINGGI */
+/* HEADER SEUKURAN FOTO OM */
 header{
   position: relative;
   color:#fff;
   text-align:center;
-  min-height: 250px;
+  height: 35vh; /* 35% dari tinggi layar. Pas seperti di foto */
+  min-height: 280px; /* minimal 280px biar ga kepotong */
+  max-height: 400px; /* maksimal 400px biar ga kepanjangan di laptop gede */
   display:flex;align-items:flex-end;justify-content:center;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
   overflow: hidden;
   background: linear-gradient(135deg,var(--biru) 0%,var(--biru2) 100%);
 }
@@ -28,73 +30,73 @@ header{
   top: 0; left: 0;
   width: 100%; height: 100%;
   object-fit: cover;
-  object-position: center 20%;
+  object-position: center 30%; /* fokus ke tengah atas biar teknisi kelihatan */
   z-index: -1;
 }
 .header-content{
   position: relative;
-  background: rgba(10,31,68,0.85);
-  padding: 12px 10px;
-  border-radius: 12px;
+  background: rgba(10,31,68,0.9);
+  padding: 15px 12px;
+  border-radius: 15px;
   width: 90%;
-  max-width: 700px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  max-width: 750px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
 }
-.btn{display:inline-block;background:var(--wa);color:#fff;padding:9px 16px;border-radius:50px;text-decoration:none;margin:4px 3px;font-weight:bold;font-size:12px;box-shadow:0 3px 8px rgba(37,211,102,0.4)}
+.btn{display:inline-block;background:var(--wa);color:#fff;padding:10px 18px;border-radius:50px;text-decoration:none;margin:5px 4px;font-weight:bold;font-size:13px;box-shadow:0 4px 10px rgba(37,211,102,0.4)}
 .btn.kuning{background:var(--kuning);color:var(--biru)}
-.sosmed{margin-top:8px;display:flex;justify-content:center;gap:6px}
-.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:32px;height:32px}
-.sosmed svg{width:16px;height:16px}
+.sosmed{margin-top:10px;display:flex;justify-content:center;gap:8px}
+.sosmed a{display:flex;align-items:center;justify-content:center;background:#fff;border-radius:50%;text-decoration:none;width:34px;height:34px}
+.sosmed svg{width:17px;height:17px}
 .sosmed .tt{background:#000;color:#fff}.sosmed .yt{background:#FF0000;color:#fff}.sosmed .fb{background:#1877F2;color:#fff}.sosmed .ig{background:linear-gradient(45deg,#F58529,#DD2A7B,#8134AF);color:#fff}
 
-section{padding:35px 15px}
+section{padding:40px 15px}
 .container{max-width:1100px;margin:auto}
-h2{text-align:center;color:var(--biru);margin-bottom:20px;font-size:20px}
-h2::after{content:'';width:40px;height:3px;background:var(--kuning);display:block;margin:6px auto}
+h2{text-align:center;color:var(--biru);margin-bottom:25px;font-size:22px}
+h2::after{content:'';width:45px;height:3px;background:var(--kuning);display:block;margin:8px auto}
 
 .grid{display:grid;grid-template-columns:repeat(2, 1fr);gap:10px}
 @media(min-width:768px){.grid{grid-template-columns:repeat(5, 1fr)}}
 .card{background:#fff;border-radius:10px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center;transition:0.3s}
 .card:hover{transform:translateY(-5px)}
-.card-img{width:100%;height:120px;object-fit:cover;display:block}
-.card-content{padding:8px;font-size:11px}
+.card-img{width:100%;height:130px;object-fit:cover;display:block}
+.card-content{padding:8px;font-size:11px;line-height:1.3}
 .card-content b{color:var(--biru);font-size:13px;display:block;margin-bottom:3px}
 
 .accordion{max-width:900px;margin:auto;border-radius:8px;overflow:hidden;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
 .accordion-item{border-bottom:1px solid #ddd;background:#fff}
-.accordion-header{width:100%;background:#fff;color:var(--biru);padding:12px;font-size:13px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
+.accordion-header{width:100%;background:#fff;color:var(--biru);padding:13px;font-size:14px;font-weight:bold;text-align:left;border:none;cursor:pointer;display:flex;justify-content:space-between}
 .accordion-header::after{content:'+';font-size:16px;color:var(--biru2)}
 .accordion-header.active{background:var(--biru);color:#fff}
 .accordion-header.active::after{content:'-';color:#fff}
 .accordion-content{max-height:0;overflow:hidden;transition:max-height 0.4s ease-out;background:#f8f9fa}
-.accordion-content table{width:100%;border-collapse:collapse;font-size:12px}
-.accordion-content td,th{padding:8px;border-bottom:1px solid #eee;text-align:left}
+.accordion-content table{width:100%;border-collapse:collapse;font-size:13px}
+.accordion-content td,th{padding:9px;border-bottom:1px solid #eee;text-align:left}
 .accordion-content th{background:var(--biru2);color:#fff}
 .gratis{color:var(--wa);font-weight:bold;text-align:center}
 
-form{background:#fff;padding:15px;border-radius:10px;max-width:550px;margin:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
-form input,form select,form textarea{width:100%;padding:11px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:13px}
-form button{width:100%;padding:13px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:14px;font-weight:bold;cursor:pointer}
+form{background:#fff;padding:18px;border-radius:10px;max-width:550px;margin:auto;box-shadow:0 4px 12px rgba(0,0,0,0.1)}
+form input,form select,form textarea{width:100%;padding:12px;margin:6px 0;border:2px solid #ddd;border-radius:6px;font-size:14px}
+form button{width:100%;padding:14px;background:linear-gradient(135deg,var(--biru2),var(--biru));color:#fff;border:none;border-radius:6px;font-size:15px;font-weight:bold;cursor:pointer}
 
-.ulasan-box{background:#fff;padding:18px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
-.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:8px 0;padding:11px;border:2px solid #ddd;border-radius:6px;font-size:13px}
-.bintang-input{margin:12px 0}
-.bintang-input span{font-size:28px;color:#ccc;cursor:pointer;letter-spacing:4px}
+.ulasan-box{background:#fff;padding:20px;border-radius:10px;max-width:600px;margin:0 auto 20px;box-shadow:0 4px 12px rgba(0,0,0,0.1);text-align:center}
+.ulasan-box input, .ulasan-box textarea{width:100%;display:block;margin:10px 0;padding:12px;border:2px solid #ddd;border-radius:6px;font-size:14px}
+.bintang-input{margin:15px 0}
+.bintang-input span{font-size:30px;color:#ccc;cursor:pointer;letter-spacing:5px}
 .bintang-input span.active{color:var(--kuning)}
 .list-ulasan{max-width:800px;margin:auto}
-.kartu-ulasan{background:#fff;padding:14px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
-.kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:14px}
-.kartu-ulasan .bintang{color:var(--kuning);font-size:15px;margin:3px 0}
-.kartu-ulasan .tgl{font-size:11px;color:#777}
+.kartu-ulasan{background:#fff;padding:15px;margin-bottom:12px;border-radius:8px;box-shadow:0 2px 8px rgba(0,0,0,0.08);border-left:4px solid var(--kuning)}
+.kartu-ulasan .nama{font-weight:bold;color:var(--biru);font-size:15px}
+.kartu-ulasan .bintang{color:var(--kuning);font-size:16px;margin:4px 0}
+.kartu-ulasan .tgl{font-size:12px;color:#777}
 
-footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-size:12px}
-.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:48px;height:48px;display:flex;align-items:center;justify-content:center;font-size:24px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999}
+footer{background:var(--biru);color:#fff;text-align:center;padding:20px;font-size:13px}
+.whatsapp{position:fixed;bottom:12px;right:12px;background:var(--wa);color:#fff;border-radius:50%;width:50px;height:50px;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 4px 12px rgba(0,0,0,0.3);z-index:999}
 
-/* HP KECIL */
+/* HP */
 @media(max-width:600px){
-  header{min-height: 200px;}
-  .header-content{padding: 10px 8px;}
-  .btn{font-size:11px;padding:7px 12px;}
+  header{height: 30vh; min-height: 220px;}
+  .header-content{padding: 12px 8px;}
+  .btn{font-size:12px;padding:8px 14px;}
 }
 </style>
 </head>
@@ -105,12 +107,12 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
   <div class="header-content">
     <a href="#layanan" class="btn">LAYAN</a>
     <a href="#ulasan" class="btn kuning">ULASAN</a>
-    <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA</a>
+    <a href="https://wa.me/6282282508521" class="btn" target="_blank">💬 WA SEKARANG</a>
     <div class="sosmed">
       <a href="https://www.tiktok.com/@sm.teknik.jaksel" class="tt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12.5 2v10.3c0 .8-.6 1.5-1.5 1.5s-1.5-.7-1.5-1.5 .6-1.5 1.5-1.5V7.1c-2.5 0-4.5 2-4.5 4.5s2 4.5 4.5 4.5 4.5-2 4.5-4.5V2h-3z"/></svg></a>
-      <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1 1.2.1 2 .3 2.5.5.6.2 1 .5 1.5 1s.8.9 1 1.5c.2.5.4 1.3.5 2.5.1 1.3.1 1.7.1 4.9s0 3.6-.1 4.9c-.1 1.2-.3 2-.5 2.5-.2.6-.5 1-1 1.5s-.9.8-1.5 1c-.5.2-1.3.4-2.5.5-1.3.1-1.7.1-4.9.1s-3.6 0-4.9-.1c-1.2-.1-2-.3-2.5-.5a3.7 3.7 0 0 1-1.5-1 3.7 3.7 0 0 1-1-1.5c-.2-.5-.4-1.3-.5-2.5C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.9c.1-1.2.3-2 .5-2.5.2-.6.5-1 1-1.5s.9-.8 1.5-1c.5-.2 1.3-.4 2.5-.5C8.4 2.2 8.8 2.2 12 2.2z"/></svg></a>
-      <a href="https://www.youtube.com/@smteknik-o6n" class="yt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8.1c-.3-1.1-1.1-2-2.2-2.3C18.3 5.5 12 5.5 12 5.5s-6.3 0-7.6.3c-1.1.3-1.9 1.2-2.2 2.3C2 9.5 2 12 2 12s0 2.5.2 3.9c.3 1.1 1.1 2 2.2 2.3 1.3.3 7.6.3 7.6.3s6.3 0 7.6-.3c1.1-.3 1.9-1.2 2.2-2.3.2-1.4.2-3.9.2-3.9s0-2.5-.2-3.9zM10 15V9l6 3-6 3z"/></svg></a>
-      <a href="LINK_FB_OM_DISINI" class="fb" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10-10S2 6.5 2 12c0 5 3.7 9.1 8.5 9.9v-7H8v-3h2.5V9.8c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2v2.4h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.4v7C18.3 21.1 22 17 22 12z"/></svg></a>
+      <a href="https://www.instagram.com/smteknik01" class="ig" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.9.1"/></svg></a>
+      <a href="https://www.youtube.com/@smteknik-o6n" class="yt" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M21.8 8.1c-.3-1.1-1.1-2-2.2-2.3"/></svg></a>
+      <a href="LINK_FB_OM_DISINI" class="fb" target="_blank"><svg fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.5-4.5-10-10S2 6.5 2 12"/></svg></a>
     </div>
   </div>
 </header>
@@ -159,7 +161,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 <!-- ULASAN -->
 <section id="ulasan" style="background:#fff"><div class="container"><h2 class="fade-in">Ulasan Pelanggan</h2>
 <div class="ulasan-box fade-in">
-  <h3 style="text-align:center;color:var(--biru);margin-bottom:8px">Beri Penilaian Anda</h3>
+  <h3 style="text-align:center;color:var(--biru);margin-bottom:10px">Beri Penilaian Anda</h3>
   <input type="text" id="namaUlasan" placeholder="Nama Anda" required>
   <div class="bintang-input"><span data-b="1">★</span><span data-b="2">★</span><span data-b="3">★</span><span data-b="4">★</span><span data-b="5">★</span></div>
   <textarea id="isiUlasan" rows="3" placeholder="Tulis pengalaman Anda menggunakan jasa kami..." required></textarea>
@@ -171,7 +173,7 @@ footer{background:var(--biru);color:#fff;text-align:center;padding:18px;font-siz
 </div>
 </div></section>
 
-<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:8px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
+<footer><p><b>SM TEKNIK JAKSEL</b></p><p>FAZIL: 0813-6919-0759 | SOPAN: 0822-8250-8521</p><p>Email: smteknik01@gmail.com</p><p style="margin-top:10px">© 2026 SM TEKNIK. Melayani Jakarta Selatan</p></footer>
 <a href="https://wa.me/6282282508521" class="whatsapp" target="_blank">💬</a>
 
 <script>
@@ -183,7 +185,7 @@ acc.forEach(btn => {btn.addEventListener("click", function() {
   this.classList.toggle("active");
   const content = this.nextElementSibling;
   content.style.maxHeight = content.style.maxHeight ? null : content.scrollHeight + "px";
-});});
+});
 
 let rating=0;
 document.querySelectorAll('.bintang-input span').forEach(b=>{
@@ -209,3 +211,4 @@ function kirimWA(e){e.preventDefault();var nama = document.getElementById('nama'
 </script>
 </body>
 </html>
+
